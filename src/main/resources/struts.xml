@@ -14,5 +14,8 @@
 		<action name="user*" class="com.join.action.UserAction" method="user{1}">
 			<result name="index">index.jsp</result>
 		</action>
+		<action name="lookmyiresume" class="com.join.action.UserAction" method="lookmyiresume">
+			<result name="success">iresume.jsp</result>
+		</action>
 	</package>
 </struts>

@@ -34,9 +34,8 @@
           <a href="#" class="admin">企业版</a></li>
       </ul>
       <ul style="float:right;margin-right:20px;">
-        <li class="click_login">登录</li>
-        <li>|</li>
-        <li class="click_register">注册</li>
+        <li>${sessionScope.userinfo.get(0).user_name }</li>
+        <li ><a href="userlogout" style="color: white">注销</a></li>
       </ul>
     </div>
     <!--nav1 E-->
@@ -66,7 +65,7 @@
           <li>
             <a href="#">职位搜索</a></li>
           <li>
-            <a href="iresume.jsp">简历中心</a></li>
+            <a href="lookmyiresume?resume_name=${sessionScope.userinfo.get(0).user_name }">简历中心</a></li>
           <li>
             <a href="collections.jsp">收藏夹</a></li>
         </ul>
@@ -80,7 +79,7 @@
     <div class="container_left">
     <div class="navTmp" style="display:none;"></div>
       <p>我的简历</p>
-      <h4>更新 ：2017—03—01</h4>
+      <h4>更新 ：${sessionScope.myresume.get(0).resume_oktime }</h4>
       <h4>公开 ：对所有公开<i class="fa fa-question-circle" aria-hidden="true" style="margin-left: 5px"></i></h4>
       <div class="star">
         <i class="fa fa-star" aria-hidden="true"></i>
@@ -112,11 +111,11 @@
   </span>
   <div class="basicShow">
     <span>
-    用户1 | 男 | 3年工作经验
+    ${sessionScope.myresume.get(0).resume_name } | ${sessionScope.myresume.get(0).resume_sex } | ${sessionScope.myresume.get(0).resume_offeryear }年工作经验
       <br>
-    18644444444 | jason@qq.com
+    ${sessionScope.myresume.get(0).resume_phone } | ${sessionScope.myresume.get(0).resume_email }
       <br>
-    目前正在找工作
+    ${sessionScope.myresume.get(0).resume_status } 
     </span>
     <div class="m_portrait">
       <div></div>
@@ -131,16 +130,16 @@
             <td valign="top">
               <span class="redstar">*</span></td>
             <td>
-              <input type="text" placeholder="姓名" value="用户1" name="name" id="name"></td>
+              <input type="text" placeholder="姓名" value="${sessionScope.myresume.get(0).resume_name }" name="resume_name" id="name"></td>
             <td valign="top"></td>
             <td>
               <ul class="profile_radio clearfix reset">
                 <li class="current">男
                   <em></em>
-                  <input type="radio" checked="checked" name="gender" value="男"></li>
+                  <input type="radio" checked="checked" name="resume_sex" value="男"></li>
                 <li>女
                   <em></em>
-                  <input type="radio" name="gender" value="女"></li>
+                  <input type="radio" name="resume_sex" value="女"></li>
               </ul>
             </td>
           </tr>
@@ -153,18 +152,18 @@
               <input type="button" value="" id="select_workyear" class="profile_select_190 profile_select_normal">
               <div class="boxUpDown boxUpDown_190 dn" id="box_workyear" style="display: none;">
                 <ul>
-                  <li>应届毕业生</li>
-                  <li>1年</li>
-                  <li>2年</li>
-                  <li>3年</li>
-                  <li>4年</li>
-                  <li>5年</li>
-                  <li>6年</li>
-                  <li>7年</li>
-                  <li>8年</li>
-                  <li>9年</li>
-                  <li>10年</li>
-                  <li>10年以上</li></ul>
+                  <li name="resume_offeryear" value="应届毕业生" >应届毕业生</li>
+                  <li name="resume_offeryear" value="1">1年</li>
+                  <li name="resume_offeryear" value="2">2年</li>
+                  <li name="resume_offeryear" value="3">3年</li>
+                  <li name="resume_offeryear" value="4">4年</li>
+                  <li name="resume_offeryear" value="5">5年</li>
+                  <li name="resume_offeryear" value="6">6年</li>
+                  <li name="resume_offeryear" value="7">7年</li>
+                  <li name="resume_offeryear" value="8">8年</li>
+                  <li name="resume_offeryear" value="9">9年</li>
+                  <li name="resume_offeryear" value="10">10年</li>
+                  <li name="resume_offeryear" value="10年以上">10年以上</li></ul>
               </div>
             </td>
           </tr>
@@ -172,13 +171,13 @@
             <td valign="top">
               <span class="redstar">*</span></td>
             <td colspan="3">
-              <input type="text" placeholder="手机号码" value="18104860443" name="tel" id="tel"></td>
+              <input type="text" placeholder="手机号码" value="${sessionScope.myresume.get(0).resume_email }" name="resume_phone" id="tel"></td>
           </tr>
           <tr>
             <td valign="top">
               <span class="redstar">*</span></td>
             <td colspan="3">
-              <input type="text" placeholder="接收面试通知的邮箱" value="18104860443@163.com" name="email" id="email"></td>
+              <input type="text" placeholder="接收面试通知的邮箱" value="${sessionScope.myresume.get(0).resume_email }" name="resume_email" id="email"></td>
           </tr>
           <tr>
             <td valign="top"></td>
@@ -187,10 +186,10 @@
               <input type="button" value="目前状态" id="select_currentState" class="profile_select_410 profile_select_normal">
               <div class="boxUpDown boxUpDown_410 dn" id="box_currentState" style="display: none;">
                 <ul>
-                  <li>我目前已离职，可快速到岗</li>
-                  <li>我目前正在职，正考虑换个新环境</li>
-                  <li>我暂时不想找工作</li>
-                  <li>我是应届毕业生</li></ul>
+                  <li name="resume_status" value="我目前已离职，可快速到岗">我目前已离职，可快速到岗</li>
+                  <li name="resume_status" value="我目前正在职，正考虑换个新环境">我目前正在职，正考虑换个新环境</li>
+                  <li name="resume_status" value="我暂时不想找工作">我暂时不想找工作</li>
+                  <li name="resume_status" value="我是应届毕业生">我是应届毕业生</li></ul>
               </div>
             </td>
           </tr>
@@ -330,31 +329,31 @@
               <ul class="profile_radio clearfix reset">
                 <li class="current">全职
                   <em></em>
-                  <input type="radio" checked="" name="type" value="全职"></li>
+                  <input type="radio" checked="" name="resume_type" value="全职"></li>
                 <li>兼职
                   <em></em>
-                  <input type="radio" name="type" value="兼职"></li>
+                  <input type="radio" name="resume_type" value="兼职"></li>
                 <li>实习
                   <em></em>
-                  <input type="radio" name="type" value="实习"></li>
+                  <input type="radio" name="resume_type" value="实习"></li>
               </ul>
             </td>
           </tr>
           <tr>
             <td>
-              <input type="text" placeholder="期望职位，如：产品经理" value="" name="expectPosition" id="expectPosition"></td>
+              <input type="text" placeholder="期望职位，如：产品经理" value="" name="resume_zhineng" id="expectPosition"></td>
             <td>
               <input type="hidden" id="expectSalary" value="" name="expectSalary">
-              <input type="button" value="期望月薪" id="select_expectSalary" class="profile_select_287 profile_select_normal">
+              <input type="button" value="期望月薪"  id="select_expectSalary" class="profile_select_287 profile_select_normal">
               <div class="boxUpDown boxUpDown_287 dn" id="box_expectSalary" style="display: none;">
-                <ul>
-                  <li>2k以下</li>
-                  <li>2k-5k</li>
-                  <li>5k-10k</li>
-                  <li>10k-15k</li>
-                  <li>15k-25k</li>
-                  <li>25k-50k</li>
-                  <li>50k以上</li></ul>
+                <ul name="resume_money">
+                  <li value="2k以下">2k以下</li>
+                  <li value="2k-5k">2k-5k</li>
+                  <li value="5k-10k">5k-10k</li>
+                  <li value="10k-15k">10k-15k</li>
+                  <li value="15k-25k">15k-25k</li>
+                  <li value="25k-50k">25k-50k</li>
+                  <li value="50k以上">50k以上</li></ul>
               </div>
             </td>
           </tr>
@@ -371,13 +370,13 @@
   <div class="expectAdd pAdd">
 
     <ul >
-      <li>北京</li>
+      <li>${sessionScope.myresume.get(0).resume_address }</li>
       <li>/</li>
-      <li>实习</li>
+      <li>${sessionScope.myresume.get(0).resume_type }</li>
       <li>/</li>
-      <li>web前端</li>
+      <li>${sessionScope.myresume.get(0).resume_zhineng }</li>
       <li>/</li>
-      <li>2K-5K</li>
+      <li>${sessionScope.myresume.get(0).resume_money }</li>
     </ul>
     <br><br>
     <span>编辑...</span></div>
@@ -702,13 +701,13 @@
   <!--end .educationalEdit-->
   <div class="educationalAdd pAdd">
       <ul>
-        <li>内蒙古师范大学</li>
+        <li>${sessionScope.myresume.get(0).resume_schoolname }</li>
         <li>/</li>
-        <li>本科</li>
+        <li>${sessionScope.myresume.get(0).resume_xueli }</li>
         <br><br>
-        <li>计算机科学与技术</li>
+        <li>${sessionScope.myresume.get(0).resume_zhuanye}</li>
         <li>/</li>
-        <li>2013-2017</li>
+        <li>${sessionScope.myresume.get(0).resume_finshtime }</li>
       </ul>
       <br><br>
     <span>编辑...</span></div>
@@ -740,7 +739,7 @@
     <!--end .descriptionForm--></div>
   <!--end .descriptionEdit-->
   <div class="descriptionAdd pAdd">
-  <p>自我描述自我描述自我描述自我描述自我描述</p>
+  <p>${sessionScope.myresume.get(0).resume_myself }</p>
     <span>编辑...</span></div>
   <!--end .descriptionAdd--></div>
 <!--end #selfDescription-->
@@ -778,8 +777,8 @@
   <div class="workAdd pAdd">
     <ul>
       <li>
-        <p>链接：<a href="http://he515.top/graduationProject/index.jsp">http://he515.top/graduationProject/index.jsp</a></p>
-        <p>描述：123123123</p>
+        <p>链接：<a href="http://${sessionScope.myresume.get(0).resume_lianjie }">${sessionScope.myresume.get(0).resume_lianjie }</a></p>
+        <p>描述：${sessionScope.myresume.get(0).resume_miaoshu }</p>
       </li>
       <li>
         

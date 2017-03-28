@@ -47,7 +47,7 @@
       <s:else>
       <ul style="float:right;margin-right:20px;">
       	<li>${sessionScope.userinfo.get(0).user_name }</li>
-        <li ><a href="userlogout">注销</a></li>
+        <li ><a href="userlogout" style="color: white">注销</a></li>
       </ul>
       </s:else>
     </div>
@@ -78,7 +78,7 @@
           <li>
             <a href="#">职位搜索</a></li>
           <li>
-            <a href="iresume.jsp">简历中心</a></li>
+            <a href="lookmyiresume?resume_name=${sessionScope.userinfo.get(0).user_name }">简历中心</a></li>
           <li>
             <a href="collections.jsp">收藏夹</a></li>
         </ul>

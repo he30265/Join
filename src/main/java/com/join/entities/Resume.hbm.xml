@@ -68,5 +68,8 @@
         <property name="resume_alook" type="java.lang.String">
             <column name="RESUME_ALOOK" />
         </property>
+         <property name="resume_phone" type="java.lang.String">
+            <column name="RESUME_PHONE" />
+        </property>
     </class>
 </hibernate-mapping>

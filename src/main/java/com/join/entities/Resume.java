@@ -25,6 +25,7 @@ public class Resume {
 	private String resume_myself;
 	private String resume_oktime;
 	private String resume_alook;
+	private String resume_phone;
 	public Integer getResume_id() {
 		return resume_id;
 	}
@@ -151,6 +152,12 @@ public class Resume {
 	public void setResume_alook(String resume_alook) {
 		this.resume_alook = resume_alook;
 	}
+	public String getResume_phone() {
+		return resume_phone;
+	}
+	public void setResume_phone(String resume_phone) {
+		this.resume_phone = resume_phone;
+	}
 	@Override
 	public String toString() {
 		return "Resume [resume_id=" + resume_id + ", resume_name=" + resume_name + ", resume_image=" + resume_image
@@ -160,7 +167,8 @@ public class Resume {
 				+ ", resume_type=" + resume_type + ", resume_finshtime=" + resume_finshtime + ", resume_schoolname="
 				+ resume_schoolname + ", resume_zhuanye=" + resume_zhuanye + ", resume_xueli=" + resume_xueli
 				+ ", resume_lianjie=" + resume_lianjie + ", resume_miaoshu=" + resume_miaoshu + ", resume_myself="
-				+ resume_myself + ", resume_oktime=" + resume_oktime + ", resume_alook=" + resume_alook + "]";
+				+ resume_myself + ", resume_oktime=" + resume_oktime + ", resume_alook=" + resume_alook
+				+ ", resume_phone=" + resume_phone + "]";
 	}
 	
 }

@@ -156,25 +156,25 @@
 </style>
   <div class="preview">
     <div class="preview_top">
-      <h1>用户1的简历</h1>
-      <a href="#">返回</a>
+      <h1>用户${sessionScope.userinfo.get(0).user_name }的简历</h1>
+      <a href="iresume.jsp">返回</a>
     </div>
     <div class="preview_content">
       <div class="info">
         <h2>&nbsp;&nbsp;基本信息</h2>
         <div class="info_left">
           <ul>
-          <li>用户1</li>
+          <li>用户:${sessionScope.userinfo.get(0).user_name }</li>
           <br><br>
-          <li>男</li>
+          <li>${sessionScope.myresume.get(0).resume_sex}</li>
           <li>|</li>
-          <li>1年工作经验</li>
+          <li>${sessionScope.myresume.get(0).resume_offeryear}年工作经验</li>
           <li>|</li>
-          <li>目前正在找工作</li>
+          <li>${sessionScope.myresume.get(0).resume_status}</li>
         </ul>
         <br><br>
-        <b>18104860443@163.com</b>
-        <b>15901450207</b>
+        <b>${sessionScope.myresume.get(0).resume_email}</b>
+        <b>${sessionScope.myresume.get(0).resume_phone}</b>
         </div>
         <div class="info_right">
         <img src="images/timg.jpg" alt="">
@@ -183,38 +183,38 @@
       <div class="career">
         <h2>&nbsp;&nbsp;期望工作</h2>
         <ul>
-          <li>北京</li>
+          <li>${sessionScope.myresume.get(0).resume_wantadd}</li>
           <li>|</li>
-          <li>实习</li>
+          <li>${sessionScope.myresume.get(0).resume_type}</li>
           <li>|</li>
-          <li>Web前端开发</li>
+          <li>${sessionScope.myresume.get(0).resume_zhineng}</li>
           <li>|</li>
-          <li>3000-4499</li>
+          <li>${sessionScope.myresume.get(0).resume_money}</li>
         </ul>
       </div>
       <div class="education">
         <h2>&nbsp;&nbsp;教育背景</h2>
         <ul>
-          <li>内蒙古师范大学</li>
+          <li>${sessionScope.myresume.get(0).resume_schoolname}</li>
           <br><br>
-          <li>本科</li>
+          <li>${sessionScope.myresume.get(0).resume_xueli}</li>
           <li>|</li>
-          <li>计算机科学与技术</li>
+          <li>${sessionScope.myresume.get(0).resume_zhuanye}</li>
           <br><br>
-          <li>2013-2017</li>
+          <li>${sessionScope.myresume.get(0).resume_finshtime}</li>
         </ul>
       </div>
       
       <div class="evaluation">
         <h2>&nbsp;&nbsp;自我评价</h2>
-        <p>1234123132</p>
+        <p>${sessionScope.myresume.get(0).resume_myself}</p>
       </div>
       <div class="skills">
         <h2>&nbsp;&nbsp;作品展示</h2>
         <ul>
             <li>
-              <p>链接：<a href="http://he515.top/graduationProject/index.jsp">http://he515.top/graduationProject/index.jsp</a></p>
-        <p>描述：123123123</p>
+              <p>链接：<a href="http://${sessionScope.myresume.get(0).resume_lianjie}">${sessionScope.myresume.get(0).resume_lianjie}</a></p>
+        <p>描述：${sessionScope.myresume.get(0).resume_miaoshu}</p>
             </li>
           </ul>
       </div>
