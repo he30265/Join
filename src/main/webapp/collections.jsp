@@ -323,11 +323,11 @@
       <div class="nav2-right">
         <ul>
           <li>
-            <a href="index.html">首页</a></li>
+            <a href="index.jsp">首页</a></li>
           <li>
             <a href="#">职位搜索</a></li>
           <li>
-            <a href="iresume.html">简历中心</a></li>
+            <a href="iresume.jsp">简历中心</a></li>
           <li>
             <a href="javascript:">收藏夹</a></li>
         </ul>
@@ -471,11 +471,11 @@
     <div class="myinfo">
       <p>我的信息</p>
       <br>
-      <a href="collections.html">我收藏的简历</a>
+      <a href="collections.jsp">我收藏的简历</a>
       <br>
-      <a href="iresume.html">我的简历</a>
+      <a href="iresume.jsp">我的简历</a>
       <br>
-      <a href="delivery.html">我投递的记录</a>
+      <a href="delivery.jsp">我投递的记录</a>
     </div>
     <div class="wechat">
       <img src="images/erweima .png" alt="">

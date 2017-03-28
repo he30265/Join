@@ -110,7 +110,7 @@
           <a href="#" class="app">APP</a></li>
         <li>|</li>
         <li>
-          <a href="index.html" class="users">用户版</a></li>
+          <a href="index.jsp" class="users">用户版</a></li>
       </ul>
       <ul style="float:right;margin-right:20px;">
         <li class="user" style="">企业</li>
@@ -155,11 +155,11 @@
       <div class="nav2-right">
         <ul>
           <li>
-            <a href="index.html">首页</a></li>
+            <a href="index.jsp">首页</a></li>
           <li>
-            <a href="manageResume.html">简历管理</a></li>
+            <a href="manageResume.jsp">简历管理</a></li>
           <li>
-            <a href="create.html">发布职位</a></li>
+            <a href="create.jsp">发布职位</a></li>
           <li>
             <a href="javascript:void(0)">公司</a></li>
         </ul>

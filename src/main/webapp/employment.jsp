@@ -67,13 +67,13 @@
       <div class="nav2-right">
         <ul>
           <li>
-            <a href="index.html">首页</a></li>
+            <a href="index.jsp">首页</a></li>
           <li>
             <a href="#">职位搜索</a></li>
           <li>
-            <a href="iresume.html">简历中心</a></li>
+            <a href="iresume.jsp">简历中心</a></li>
           <li>
-            <a href="collections.html">收藏夹</a></li>
+            <a href="collections.jsp">收藏夹</a></li>
         </ul>
       </div>
     </div>

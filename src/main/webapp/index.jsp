@@ -35,7 +35,7 @@
           <a href="#" class="app">APP</a></li>
         <li>|</li>
         <li>
-          <a href="create.html" class="admin">企业版</a></li>
+          <a href="create.jsp" class="admin">企业版</a></li>
       </ul>
       <s:if test="#session.userinfo==null">
       <ul style="float:right;margin-right:20px;">
@@ -74,13 +74,13 @@
       <div class="nav2-right">
         <ul>
           <li>
-            <a href="index.html">首页</a></li>
+            <a href="index.jsp">首页</a></li>
           <li>
             <a href="#">职位搜索</a></li>
           <li>
-            <a href="iresume.html">简历中心</a></li>
+            <a href="iresume.jsp">简历中心</a></li>
           <li>
-            <a href="collections.html">收藏夹</a></li>
+            <a href="collections.jsp">收藏夹</a></li>
         </ul>
       </div>
     </div>
@@ -399,7 +399,7 @@
           <div id="content">
             <div id="tab1" class="item show">
               <div class="recommendjob">
-                <a href="employment.html">实习前端工程师[北京·望京]</a>
+                <a href="employment.jsp">实习前端工程师[北京·望京]</a>
                 <p>2天前发布</p>
                 <a href="#" style="margin-left: 200px">慧推移动</a>
                 <br>

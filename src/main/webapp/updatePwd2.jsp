@@ -263,11 +263,11 @@
       <div class="nav2-right">
         <ul>
           <li>
-            <a href="index.html">首页</a></li>
+            <a href="index.jsp">首页</a></li>
           <li>
             <a href="#">职位搜索</a></li>
           <li>
-            <a href="iresume.html">简历中心</a></li>
+            <a href="iresume.jsp">简历中心</a></li>
           <li>
             <a href="javascript:">收藏夹</a></li>
         </ul>
@@ -346,7 +346,7 @@
     <div class="myinfo">
       <p>我的帐号</p>
       <br>
-      <a href="collections.html">修改密码</a>
+      <a href="collections.jsp">修改密码</a>
       
       
     </div>

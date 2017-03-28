@@ -213,7 +213,7 @@
         <h2>&nbsp;&nbsp;作品展示</h2>
         <ul>
             <li>
-              <p>链接：<a href="http://he515.top/graduationProject/index.html">http://he515.top/graduationProject/index.html</a></p>
+              <p>链接：<a href="http://he515.top/graduationProject/index.jsp">http://he515.top/graduationProject/index.jsp</a></p>
         <p>描述：123123123</p>
             </li>
           </ul>

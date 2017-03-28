@@ -62,13 +62,13 @@
       <div class="nav2-right">
         <ul>
           <li>
-            <a href="index.html">首页</a></li>
+            <a href="index.jsp">首页</a></li>
           <li>
             <a href="#">职位搜索</a></li>
           <li>
-            <a href="iresume.html">简历中心</a></li>
+            <a href="iresume.jsp">简历中心</a></li>
           <li>
-            <a href="collections.html">收藏夹</a></li>
+            <a href="collections.jsp">收藏夹</a></li>
         </ul>
       </div>
     </div>
@@ -91,7 +91,7 @@
         <span class="fa fa-question-circle" aria-hidden="true" style="margin-left: 5px;"></span>
       </div>
       <button style="background-color: #00B38A; color:white">刷新</button>
-      <button style="color: #00B38A"><a href="preview.html">预览</a></button>
+      <button style="color: #00B38A"><a href="preview.jsp">预览</a></button>
       <ul class="list">
         <li><a href="#basicInfo"><i class="fa fa-user-o" aria-hidden="true"></i>基本信息</a></li>
         <li><a href="#expectJob"><i class="fa fa-file-text" aria-hidden="true"></i>求职意向</a></li>
@@ -778,7 +778,7 @@
   <div class="workAdd pAdd">
     <ul>
       <li>
-        <p>链接：<a href="http://he515.top/graduationProject/index.html">http://he515.top/graduationProject/index.html</a></p>
+        <p>链接：<a href="http://he515.top/graduationProject/index.jsp">http://he515.top/graduationProject/index.jsp</a></p>
         <p>描述：123123123</p>
       </li>
       <li>
