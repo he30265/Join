@@ -11,9 +11,11 @@
 	<constant name="struts.devMode" value="true" />
 
 	<package name="default" namespace="/" extends="struts-default">
-		<action name="userlogin" class="UserAction" method="userlogin">
-			<result name="success">index.jsp</result>
-			<result name="input">2.jsp</result>
+		<action name="userreg" class="com.join.action.UserAction" method="userreg">
+			<result name="index">index.jsp</result>
+		</action>
+		<action name="userlogin" class="com.join.action.UserAction" method="userlogin">
+			<result name="index">index.jsp</result>
 		</action>
 	</package>
 </struts>
