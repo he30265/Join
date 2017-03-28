@@ -46,8 +46,8 @@
       </s:if>
       <s:else>
       <ul style="float:right;margin-right:20px;">
-      	<li>勇士归来→</li>
-        <li >${sessionScope.userinfo.get(0).user_name }</li>
+      	<li>${sessionScope.userinfo.get(0).user_name }</li>
+        <li ><a href="userlogout">注销</a></li>
       </ul>
       </s:else>
     </div>

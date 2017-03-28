@@ -11,10 +11,7 @@
 	<constant name="struts.devMode" value="true" />
 
 	<package name="default" namespace="/" extends="struts-default">
-		<action name="userreg" class="com.join.action.UserAction" method="userreg">
-			<result name="index">index.jsp</result>
-		</action>
-		<action name="userlogin" class="com.join.action.UserAction" method="userlogin">
+		<action name="user*" class="com.join.action.UserAction" method="user{1}">
 			<result name="index">index.jsp</result>
 		</action>
 	</package>
